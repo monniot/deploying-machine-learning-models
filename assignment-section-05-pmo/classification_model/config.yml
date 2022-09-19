@@ -1,0 +1,63 @@
+# Package Overview
+package_name: classification_model
+
+# Data Files
+training_data_file: train.csv
+test_data_file: test.csv
+
+# Variables
+# The variable we are attempting to predict (sale price)
+target: survived
+
+pipeline_name: classification_model
+pipeline_save_file: classification_model_output_v
+
+# Features of the train and test datasets
+features:
+  - pclass
+  - sex
+  - age
+  - sibsp
+  - parch
+  - fare
+  - cabin
+  - embarked
+  - title
+
+# Name column to be renamed into Title after transformation
+variables_to_rename:
+  'name': title
+
+# Irrelevant features to be dropped
+features_to_drop:
+  - ticket
+  - boat
+  - body
+  - home.dest
+  - name
+
+# set train/test split
+test_size: 0.1
+
+# to set the random seed
+random_state: 0
+
+C: 0.005
+
+# categorical variables with NA in train set
+categorical_vars:
+  - sex
+  - cabin
+  - embarked
+  - title
+
+numerical_vars:
+  - age
+  - fare
+
+cabin: 
+  - cabin
+
+name: 
+  - name
+
