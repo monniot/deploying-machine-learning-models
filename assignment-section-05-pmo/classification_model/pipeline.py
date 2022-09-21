@@ -4,13 +4,11 @@ from feature_engine.imputation import (
     CategoricalImputer,
     MeanMedianImputer,
 )
-from feature_engine.selection import DropFeatures
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 
 from classification_model.config.core import config
-from classification_model.processing import features as pp
 
 titanic_pipe = Pipeline(
     [
