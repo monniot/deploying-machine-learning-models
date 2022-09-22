@@ -1,4 +1,4 @@
-#!/mnt/c/git/deploying-machine-learning-models/deploy_env/bin/python
+#!/mnt/c/git/deploying-machine-learning-models/deploy_env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
